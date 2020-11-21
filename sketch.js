@@ -4,7 +4,7 @@ const World = Matter.World;
 const Bodies = Matter.Bodies;
 const Body = Matter.Body;
 
-var paperobj,groundobj,dustbinobj;
+var paperobj,groundobj,dustbinobj,dustbin1obj,dustbin2obj;
 
 function preload()
 {
@@ -21,7 +21,9 @@ function setup() {
 	//Create the Bodies Here.
 	paperobj=new Paper(200,450,40);
 	groundobj=new Ground(width/2,690,width,20);
-	dustbinobj=new Dustbin(1050,588,300,170);
+	dustbinobj=new Dustbin(1040,562,30,170);
+	dustbin1obj=new Dustbin(1170,665,250,30);
+	dustbin2obj=new Dustbin(1300,562,30,170);
 
 	Engine.run(engine);
   
@@ -35,6 +37,8 @@ function draw() {
   paperobj.display();
   groundobj.display();
   dustbinobj.display();
+  dustbin1obj.display();
+  dustbin2obj.display();
 
   drawSprites();
  
